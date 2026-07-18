@@ -1,0 +1,278 @@
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+
+    margin:0;
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:"Microsoft YaHei",Arial;
+
+    background:
+    radial-gradient(circle at top,#263a8b,#090014 70%);
+
+    color:white;
+}
+
+
+
+/* 星空背景 */
+
+.stars{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background-image:
+    radial-gradient(circle,white 1px,transparent 2px);
+
+    background-size:50px 50px;
+
+    opacity:.35;
+
+    animation:moveStars 20s linear infinite;
+
+}
+
+
+@keyframes moveStars{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(50px);
+    }
+
+}
+
+
+
+/* 游戏大厅 */
+
+.castle{
+
+    position:relative;
+
+    width:450px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+
+    background:
+
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.15),
+    rgba(0,0,0,.45)
+    );
+
+
+    border:
+
+    2px solid rgba(255,255,255,.4);
+
+
+    box-shadow:
+
+    0 0 30px #7c4dff;
+
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+/* 龙 */
+
+.dragon{
+
+    font-size:100px;
+
+    animation:
+
+    floatDragon 3s infinite;
+
+    filter:
+
+    drop-shadow(0 0 20px gold);
+
+}
+
+
+
+@keyframes floatDragon{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-20px);
+
+    }
+
+}
+
+
+
+/* 标题 */
+
+
+h1{
+
+    font-size:40px;
+
+    margin:10px;
+
+
+    text-shadow:
+
+    0 0 15px cyan;
+
+}
+
+
+
+h2{
+
+    font-size:32px;
+
+    color:#ffd54f;
+
+}
+
+
+
+p{
+
+    font-size:20px;
+
+}
+
+
+
+/* 按钮 */
+
+
+button{
+
+
+    display:block;
+
+    width:80%;
+
+    margin:15px auto;
+
+
+    padding:15px;
+
+
+    border-radius:30px;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    font-size:20px;
+
+
+    color:white;
+
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #7b1fa2,
+    #1565c0
+    );
+
+
+    box-shadow:
+
+    0 0 15px #42a5f5;
+
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+
+    transform:scale(1.08);
+
+
+    box-shadow:
+
+    0 0 30px cyan;
+
+}
+
+
+
+/* 魔法光点 */
+
+
+.magic{
+
+
+    margin-top:20px;
+
+    color:#ffe082;
+
+    font-size:25px;
+
+
+    animation:
+
+    magicGlow 1.5s infinite alternate;
+
+}
+
+
+
+@keyframes magicGlow{
+
+
+    from{
+
+        opacity:.4;
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
